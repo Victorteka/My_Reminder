@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/today"
+            android:icon="@drawable/ic_calendar"
+            android:title="Today" />
+        <item android:id="@+id/fitness"
+            android:icon="@drawable/ic_fitness"
+            android:title="Fitness"/>
+        <item
+            android:id="@+id/settings"
+            android:icon="@drawable/ic_settings"
+            android:title="Settings" />
+        <item
+            android:id="@+id/notification"
+            android:icon="@drawable/ic_notifications"
+            android:title="Notification" />
+    </group>
+</menu>
