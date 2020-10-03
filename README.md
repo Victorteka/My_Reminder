@@ -23,5 +23,7 @@ Libraries used in the whole application are:
 
 ## Demo
 
-<img src="screenshots/add_note.png" width=200/>|<img src="screenshot/notes.png" width=200/>|<img src="screenshots/edit.png" width=200/>|<img src="screenshots/addtodo.png" width=200/>|<img src="screenshots/todo.png" width=200/>|<img src="screenshots/fitdialog.png" width=200/>|<img src="screenshots/all_fitness.png" width=200/>|<img src="screenshots/drawer.png" width=200/>|
+<img src="screenshots/add_note.png" width=300/>|<img src="screenshots/notes.png" width=300/>|<img src="screenshots/edit.png" width=300/>|<img src="screenshots/addtodo.png" width=300/>|<img src="screenshots/todo.png" width=300/>|<img src="screenshots/fitdialog.png" width=300/>|<img src="screenshots/all_fitness.png" width=300/>|<img src="screenshots/drawer.png" width=300/>|
 :----:|:----:|:----:|:----:|:----:|:----:|:----:|:----:|
+
+## \[ 🚧 Work in progress 👷‍♀️⛏👷🔧️👷🔧 🚧 \]
