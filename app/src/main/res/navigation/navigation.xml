@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/notesFragment">
+
+    <fragment
+        android:id="@+id/notesFragment"
+        android:name="victorteka.github.io.myreminder.ui.notes.view.NotesFragment"
+        android:label="Notes"
+        tools:layout="@layout/fragment_notes" />
+    <fragment
+        android:id="@+id/todoFragment"
+        android:name="victorteka.github.io.myreminder.ui.todos.views.TodoFragment"
+        android:label="Todos"
+        tools:layout="@layout/fragment_todo" />
+    <fragment
+        android:id="@+id/notificationFragment"
+        android:name="victorteka.github.io.myreminder.ui.NotificationFragment"
+        android:label="Notification"
+        tools:layout="@layout/fragment_notification" />
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="victorteka.github.io.myreminder.ui.SettingsFragment"
+        android:label="Settings"
+        tools:layout="@layout/fragment_settings" />
+    <fragment
+        android:id="@+id/todayFragment"
+        android:name="victorteka.github.io.myreminder.ui.TodayFragment"
+        android:label="Today"
+        tools:layout="@layout/fragment_today" />
+    <activity
+        android:id="@+id/addNoteActivity"
+        android:name="victorteka.github.io.myreminder.ui.addNote.view.AddNoteActivity"
+        android:label="activity_add_note"
+        tools:layout="@layout/activity_add_note" />
+    <fragment
+        android:id="@+id/fitnessFragment"
+        android:name="victorteka.github.io.myreminder.ui.fitness.views.FitnessFragment"
+        android:label="Fitness"
+        tools:layout="@layout/fragment_fitness" />
+</navigation>
