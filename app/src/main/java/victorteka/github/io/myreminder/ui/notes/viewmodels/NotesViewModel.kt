@@ -12,7 +12,10 @@ import victorteka.github.io.myreminder.data.local.entities.Note
 import java.lang.Exception
 
 class NotesViewModel(private val dbHelper: DatabaseHelper): ViewModel() {
-    private val notes = MutableLiveData<List<Note>>()
+    private val _notes = MutableLiveData<List<Note>>()
+    val notes :LiveData<List<Note>>
+        get() = _notes
+
 
     init {
         fetchNotes()
@@ -22,7 +25,7 @@ class NotesViewModel(private val dbHelper: DatabaseHelper): ViewModel() {
         viewModelScope.launch {
             try {
                 val notesFromDb = dbHelper.getNotes()
-                notes.postValue(notesFromDb)
+                _notes.postValue(notesFromDb)
             }catch (e: Exception){
                 Log.d("TAG", "--error---"+e.message)
             }
@@ -40,7 +43,11 @@ class NotesViewModel(private val dbHelper: DatabaseHelper): ViewModel() {
         }
     }
 
-    fun getNotes(): LiveData<List<Note>>{
-        return notes
+//    fun getNotes(): LiveData<List<Note>>{
+//        return _notes
+//    }
+
+    fun isNotesListEmpty():Int{
+        return _notes.value.orEmpty().size
     }
 }

@@ -35,7 +35,7 @@ class NotesFragment : Fragment() {
     ): View? {
         val view = inflater.inflate(R.layout.fragment_notes, container, false)
         setupViewModel()
-        viewModel.getNotes().observe(viewLifecycleOwner, Observer {
+        viewModel.notes.observe(viewLifecycleOwner, Observer {
             renderList(it)
             Log.d("TAG", "-----onViewCreated----: $it")
         })
@@ -48,6 +48,10 @@ class NotesFragment : Fragment() {
             navigateToAddNote()
         }
         setupUI()
+       val nList = viewModel.notes.value.orEmpty()
+        if (nList.isNotEmpty()){
+            noNotes.visibility = View.GONE
+        }
     }
 
     private fun setupViewModel() {
@@ -57,6 +61,7 @@ class NotesFragment : Fragment() {
                 DatabaseHelperImpl(DatabaseBuilder.getInstance(requireActivity().applicationContext))
             )
         ).get(NotesViewModel::class.java)
+        viewModel.isNotesListEmpty()
     }
 
     private fun setupUI() {
